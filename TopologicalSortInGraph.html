@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+</head>
+<body>
+<h1>Graphs and Topological Sort</h1>
+
+<h2>Types of Nodes:</h2>
+
+<ol>
+<li>Black: No outgoing or all outgoing nodes are visited</li>
+<li>Grey: Currently exploring the node, but not yet finished</li>
+<li>White: Currently unexplored node, i.e. not yet visited</li>
+</ol>
+
+<h2>Types of Edges:</h2>
+
+<ol>
+<li>Grey to White: Discovery Edge</li>
+<li>Grey to Grey: Back Edge</li>
+<li>Grey(first) to Black: Forward Edge</li>
+<li>Grey to Black(first): Cross Edge</li>
+</ol>
+
+<h2>What is Discovery Time and Finish Time:</h2>
+
+<p>Consider that you start at node A. The discovery time of this node will be 1 as it is the first node. As we go deep into the graph, keep incrementing this number. When we reach a node which has no outgoing edge, we consider that the discovery of this node is complete, thats when we mark it as finish time. As we come one level up after completed discovery, we still keep on incrementing this time untill the end of algorithm. This time can be imaginary and we dont have to keep track of it. Its just the order in which we discover and finish discovering a node. Thus the source will be the first one to be discovered and last one to be finished in its own tree. </p>
+
+<h2>Topological sort with DFS Algorithm basics:</h2>
+
+<ul>
+<li>If next node is white, convert it from white to grey and keep going deep.</li>
+<li>if there is no outgoing node from the current node, convert it to black and go one level up.</li>
+<li>Once all the node is marked as black, insert it to the front of the LinkedList that keeps node in a topologically sorted order.</li>
+<li>If all child nodes are black, convery the current node(grey) to black and go one level up.</li>
+<li>If while exploring, we encounter a node which is grey, there is a cycle in graph. (Cycle should not be there in a DAG- Directed Acyclic Graph). Its better to check for this condition as it has various uses in Algorithms. In this case, add this node to a list of cycling nodes. One way to handle it can be convert it to black and go one level up.</li>
+<li>If all nodes originating at one source are traversed, check if there is any independent tree in the graph. If yes, continue the same algorithm again.</li>
+</ul>
+
+<p>Here,
+* Visited :
+ * Can be an array where
+ * 0-&gt; White
+ * &#8211;1 -&gt; Black
+ * 1 -&gt; Grey
+ * if we consider it as a <code>set</code> , we will have to maintain 3 sets, one each for white, grey and black.
+* We will have to maintain a LinkedList to keep toplogically sorted nodes in order. Or we can also use an OrderedDict which is nothing but a datastructure made up of dictionary and linkedlist. </p>
+
+<h2>Topological Sort Algo:</h2>
+
+<p><em>According to Algorithm Design-CLRS</em><br/>
+TOPOLOGICAL-SORT(G)<br/>
+1. call DFS(G) to compute finishing times 􏰁v.f for each vertex 􏰁v<br/>
+2. as each vertex is finished, insert it onto the front of a linked list<br/>
+3. return the linked list of vertices<br/></p>
+
+</body>
+</html>
