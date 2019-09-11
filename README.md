@@ -321,7 +321,7 @@ def dfs(self,root):
             root=root.left
 
         node=stack.pop()
-        print node.val
+        print (node.val)
         root=node.right
 ```
 
@@ -478,7 +478,7 @@ class Solution(object):
 
 
 ```python
-# On Leetcode
+# 787. Cheapest Flights Within K Stops on Leetcode
 
 from collections import defaultdict
 class Solution(object):
@@ -521,7 +521,7 @@ class Solution(object):
 
 
 ```python
-# On Leetcode
+# 743. Network Delay Time On Leetcode
 
 from collections import defaultdict
 from heapq import *
