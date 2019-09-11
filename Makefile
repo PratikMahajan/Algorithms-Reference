@@ -1,7 +1,15 @@
-.PHONY: refresh-readme \
-	publish
+.PHONY: refresh \
+	publish \
+	rollout \
+	git \
+	rename \
+	readme
 
-publish: refresh git
+rollout:
+	@if [ -z "${m}" ]; then echo "Message must be set, use 'make publish m=your_message'"; exit 1; fi
+
+publish: rollout refresh git
+
 
 git:
 	git add . 
