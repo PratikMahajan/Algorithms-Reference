@@ -9,7 +9,7 @@
 - [Python Basics](#Python-Basics)
     - [Sorting a Dictionary with key or value](#Sorting-a-Dictionary-with-Key-or-Value)
 - [Sorting](#Sorting)
-    -[Merge Sort](#Merge-Sort)
+    - [Merge Sort](#Merge-Sort)
 - [Arrays](#Arrays)
     - [O(n) Sliding Window Algorithm](#O(n)-Sliding-Window-Algorithm)
     - [Get a Separator in a rotated sorted Array](#Get-a-Separator-in-a-rotated-sorted-Array)
@@ -474,6 +474,8 @@ class Solution(object):
 
 ## BellmanFord
 
+### BellmanFord Sample Code
+
 
 ```python
 # On Leetcode
@@ -514,6 +516,8 @@ class Solution(object):
 ```
 
 ## Dijkstras
+
+### Dijkstras Sample Code
 
 
 ```python
