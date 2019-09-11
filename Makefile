@@ -1,15 +1,9 @@
 .PHONY: refresh-readme \
-	publish \
-	push \
-	read 
+	publish
 
-publish: read push
-
-read:
-	@read -p "Add Commit Message:"  MESSAGE
-
-push:
-	@echo $(MESSAGE)
-	git add . 
-	git commit -m "$MESSAGE"
+publish:
+	@read -p "Add Commit Message:"  commitm; \
+	echo "Adding Commit message as $${commitm}"
+	git add . \ 
+	git commit -m "$${commitm}" \
 	git push
