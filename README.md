@@ -11,7 +11,7 @@
         - [Sorting a Dictionary with key or value](#Sorting-a-Dictionary-with-Key-or-Value)
         - [Ordered Dict](#Ordered-Dict)
         - [Default Dict](#Default-Dict)
-        
+        - [Dictionary Operations](#Dictionary-Operations)
 - [Sorting](#Sorting)
     - [Merge Sort](#Merge-Sort)
 - [Arrays](#Arrays)
@@ -99,7 +99,6 @@ result = [unsorted[key] for key in sorted(unsorted.keys())]
 
 ### Ordered Dict
 
-
 ```python
 import collections
 orderes_dict = collections.OrderedDict() 
@@ -109,8 +108,7 @@ orderes_dict = collections.OrderedDict()
 
 ### Default Dict
 
-
-```python
+```python 
 import collections
 dictionary = collections.defaultdict(set) # Replace 'set' with any data structure of choice
 ```
