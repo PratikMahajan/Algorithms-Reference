@@ -3,11 +3,15 @@
 
 # Table of Contents
 
-- [Class Definition](#Class-Defination)
+- [Class Definition](#Class-Definition)
     - [Linked List Class](#Linkedlist-Class)
     - [Binary Tree Class](#Binary-Tree-Class)
 - [Python Basics](#Python-Basics)
-    - [Sorting a Dictionary with key or value](#Sorting-a-Dictionary-with-Key-or-Value)
+    - [Dictionaries](#Dictionaries)
+        - [Sorting a Dictionary with key or value](#Sorting-a-Dictionary-with-Key-or-Value)
+        - [Ordered Dict](#Ordered-Dict)
+        - [Default Dict](#Default-Dict)
+        
 - [Sorting](#Sorting)
     - [Merge Sort](#Merge-Sort)
 - [Arrays](#Arrays)
@@ -74,21 +78,52 @@ class TreeNode(object):
 
 # Python Basics
 
-## Sorting a Dictionary with Key or Value
+## Dictionaries
 
-##### Sort by Key
+### Sorting a Dictionary with Key or Value
+
+**Sort by Key**
 ```python
 result = OrderedDict(sorted(unsorted.items(), key= lambda x:x[0]))
 ```
 
-##### Sort by Value
+**Sort by Value**
 ```python
 result = OrderedDict(sorted(unsorted.items(), key= lambda x:x[1]))
 ```
 
-##### Get items in Sorted Order
+**Get items in Sorted Order**
 ```python
 result = [unsorted[key] for key in sorted(unsorted.keys())]
+```
+
+### Ordered Dict
+
+
+```python
+import collections
+orderes_dict = collections.OrderedDict() 
+```
+
+**Can also take existing dictionary (won't order the dictionary by itself)**
+
+### Default Dict
+
+
+```python
+import collections
+dictionary = collections.defaultdict(set) # Replace 'set' with any data structure of choice
+```
+
+Creates a dictionary with default value(data-type). eg. list, set, dict, etc <br/>
+It is accessed as a normal dictionary 
+
+### Dictionary Operations 
+
+**Delete a key in dictionary**
+
+```python
+del d[key]  # d is the name of dictionary
 ```
 
  
@@ -329,6 +364,7 @@ def dfs(self,root):
 
 
 ```python
+# Inorder
 def dfsInorder(self,node):
     if not node:
         return 
@@ -340,6 +376,7 @@ def dfsInorder(self,node):
 
 
 ```python
+# Postorder
 def dfsPostorder(self,node):
     if not node:
         return 
@@ -351,6 +388,7 @@ def dfsPostorder(self,node):
 
 
 ```python
+# Preorder
 def dfsPreorder(self,node):
     if not node:
         return 
@@ -358,6 +396,33 @@ def dfsPreorder(self,node):
     print (node.val)    
     self.dfsPreorder(node.left)
     self.dfsPreorder(node.right)
+```
+
+## BFS in Tree
+
+
+```python
+def bfs(self,root):
+    q = [root]
+    q_u = []
+
+    result=[]
+
+    # Complexity remains same even if using two while loops. 
+    # Using two while loops to print all elements at a particular depth 
+    # Using one queue will attain the same result, just differentiating elements by depth will be difficult
+    while q:
+        while q:
+            node = q.pop()
+            if node:
+                q_u.append(node.left)
+                q_u.append(node.right)
+
+                result.append(node.val)
+        q=q_u[::-1]
+        q_u=[]
+        
+    return result 
 ```
 
  
