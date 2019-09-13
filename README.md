@@ -12,6 +12,7 @@
         - [Ordered Dict](#Ordered-Dict)
         - [Default Dict](#Default-Dict)
         - [Dictionary Operations](#Dictionary-Operations)
+    - [Heaps](#Heaps)
 - [Sorting](#Sorting)
     - [Merge Sort](#Merge-Sort)
 - [Arrays](#Arrays)
@@ -123,6 +124,33 @@ It is accessed as a normal dictionary
 ```python
 del d[key]  # d is the name of dictionary
 ```
+
+## Heaps
+
+Inbuilt heap data structure is a `min-heap` i.e. it returns smallest item of the list
+
+**Import the built-in heap using**
+```python
+import heapq
+```
+**Create a heap from list**
+```python
+heapq.heapify([])
+```
+**Insert an item into the heap**
+```python
+heapq.heappush([],item)
+```
+**Return the smallest item from the heap**
+```python
+heapq.heappop([])
+```
+**Insert an element into heap and return the smallest element**
+```python
+heapq.heappushpop([],item)
+```
+
+To convert the heap into `max-heap` (return the maximum element on `pop()`, just convert all the values into -ve while inserting
 
  
 
