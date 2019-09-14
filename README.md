@@ -152,6 +152,25 @@ heapq.heappushpop([],item)
 
 To convert the heap into `max-heap` (return the maximum element on `pop()`, just convert all the values into -ve while inserting
 
+## Regex
+
+**Import regex library using** 
+```python
+import re
+```
+
+**Compile Regex**
+```python
+regex = re.compile('your_regex_here')
+```
+
+**Replace using Regex**
+```python
+import re 
+regex = re.compile('your_regex_here')
+string = regex.sub("replace_with_this", your_string)
+```
+
  
 
 # Sorting
