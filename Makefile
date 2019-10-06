@@ -16,10 +16,15 @@ git:
 	git commit -m "$m"
 	git push 
 
-refresh: readme rename
+refresh: readme rename topics
 
 readme:
 	jupyter nbconvert Algorithms.ipynb --to markdown
 
 rename:
-	mv Algorithms.md README.md	
+	mv Algorithms.md README.md
+
+topics:
+	jupyter nbconvert Notebooks/*.ipynb --to markdown
+	mv Notebooks/*.md .
+	rm Scrapebook.md	
