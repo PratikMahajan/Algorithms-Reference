@@ -1,9 +1,7 @@
 .PHONY: refresh \
 	publish \
 	rollout \
-	git \
-	rename \
-	readme
+	git
 
 rollout:
 	@if [ -z "${m}" ]; then echo "Message must be set, use 'make publish m=your_message'"; exit 1; fi
@@ -16,15 +14,10 @@ git:
 	git commit -m "$m"
 	git push 
 
-refresh: readme rename topics
-
-readme:
-	jupyter nbconvert Algorithms.ipynb --to markdown
-
-rename:
-	mv Algorithms.md README.md
+refresh: topics
 
 topics:
 	jupyter nbconvert Notebooks/*.ipynb --to markdown
 	mv Notebooks/*.md .
 	rm Scrapebook.md	
+
