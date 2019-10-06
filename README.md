@@ -22,7 +22,7 @@
     - [Get a Separator in a rotated sorted Array](#Get-a-Separator-in-a-rotated-sorted-Array)
 - [Linkedlist](#Linkedlist)
     - [LinkedList MergeSort](#LinkedList-MergeSort)
-- [Trees](#Trees)
+- [Trees](/blob/master/06.Trees.md#Trees)
     - [DFS in Tree](#DFS-in-Tree)
         - [Iterative Solution](#Iterative-Solution)
         - [Recursive Solution](#Recursive-Solution)
