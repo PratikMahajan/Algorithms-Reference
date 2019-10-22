@@ -19,5 +19,4 @@ refresh: topics
 topics:
 	jupyter nbconvert Notebooks/*.ipynb --to markdown
 	mv Notebooks/*.md .
-	rm Scrapebook.md	
 
