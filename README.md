@@ -10,6 +10,8 @@
         - [Default Dict](01.Python-Basics.md#Default-Dict)
         - [Dictionary Operations](01.Python-Basics.md#Dictionary-Operations)
     - [Heaps](01.Python-Basics.md#Heaps)
+    - [Set](01.Python-Basics.md#SET)
+    - [Regex](01.Python-Basics.md#Regex)
     
 - [02. Sorting](02.Sorting.md#Sorting)
     - [Merge Sort](02.Sorting.md#Merge-Sort)
