@@ -1,6 +1,3 @@
-
-# Algorithms Reference 
-
 # Table of Contents
 
 - [01. Python Basics](1.01.Python-Basics.md#Python-Basics)
