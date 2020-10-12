@@ -21,6 +21,7 @@
     - [LinkedList MergeSort](1.04.LinkedList.md#LinkedList-MergeSort)
     
 - [05. Binary Search](1.05.BinarySearch.md#Binary-Search)   
+    - [Classic Binary Search](1.05.BinarySearch.md#Classic-Application-of-Binary-Search)
     - [Get a Separator in a rotated sorted Array](1.05.BinarySearch.md#Get-a-Separator-in-a-rotated-sorted-Array)
     
 - [06. Trees](1.06.Trees.md#Trees)
